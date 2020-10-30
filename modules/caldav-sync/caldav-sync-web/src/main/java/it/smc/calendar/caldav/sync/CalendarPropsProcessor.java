@@ -24,12 +24,14 @@ import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.security.permission.ActionKeys;
-import com.liferay.portal.kernel.security.permission.resource.ModelResourcePermission;
 import com.liferay.portal.kernel.util.PrefsPropsUtil;
-import com.liferay.portal.kernel.util.PropsKeys;
 import com.liferay.portal.kernel.webdav.Resource;
 import com.liferay.portal.kernel.webdav.WebDAVRequest;
 import com.liferay.portal.kernel.xml.Element;
+import com.liferay.portal.upload.constants.LegacyUploadServletRequestPropsKeys;
+
+import java.util.Optional;
+
 import it.smc.calendar.caldav.helper.api.CalendarHelperUtil;
 import it.smc.calendar.caldav.sync.util.CalDAVProps;
 import it.smc.calendar.caldav.sync.util.CalDAVUtil;
@@ -39,10 +41,6 @@ import it.smc.calendar.caldav.sync.util.WebKeys;
 import it.smc.calendar.caldav.util.PropsValues;
 import net.fortuna.ical4j.data.CalendarOutputter;
 import net.fortuna.ical4j.model.ComponentList;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-
-import java.util.Optional;
 
 /**
  * @author Fabio Pezzutto
@@ -155,7 +153,7 @@ public class CalendarPropsProcessor extends BasePropsProcessor {
 	@Override
 	protected void processCalDAVMaxResourceSize() {
 		long maxResourceSize = PrefsPropsUtil.getLong(
-			PropsKeys.UPLOAD_SERVLET_REQUEST_IMPL_MAX_SIZE)/8;
+				LegacyUploadServletRequestPropsKeys.UPLOAD_SERVLET_REQUEST_IMPL_MAX_SIZE)/8;
 
 		DocUtil.add(
 			successPropElement, CalDAVProps.CALDAV_MAX_RESOURCE_SIZE,

@@ -18,5 +18,6 @@ Some hints for contributors:
 * in this branch the basic compatibility, managed through BOM in the gradle.properties file, is:
     - Liferay 7.2 CE GA1 (7.2.0)
     - Liferay 7.2 DXP GA1
+    - Liferay 7.3 CE GA5
 * any compatibility issues with GA or subsequent fixpacks must be managed through new targeted artifacts
 

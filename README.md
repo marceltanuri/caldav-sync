@@ -1,4 +1,4 @@
-# CalDAV Sync - Liferay Workspace for Liferay 7.0+ CE e DXP
+# CalDAV Sync - Liferay Workspace for Liferay 7.0+ CE e DXP (7.3 Compatible)
 
 This workspace contains the plugin "CalDAV sync" that allows Liferay to act like a CalDAV Server.
 
@@ -18,5 +18,6 @@ Some hints for contributors:
 * in this branch the basic compatibility, managed through BOM in the gradle.properties file, is:
     - Liferay 7.2 CE GA1 (7.2.0)
     - Liferay 7.2 DXP GA1
+    - Liferay 7.3 CE GA5
 * any compatibility issues with GA or subsequent fixpacks must be managed through new targeted artifacts
 

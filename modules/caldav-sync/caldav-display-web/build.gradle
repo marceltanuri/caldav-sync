@@ -1,12 +1,11 @@
 dependencies {
 	compileOnly group: "com.liferay", name: "com.liferay.calendar.api"
 	compileOnly group: "com.liferay", name: "com.liferay.calendar.service"
-	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
-	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib"
 	compileOnly group: "javax.portlet", name: "portlet-api"
 	compileOnly group: "jstl", name: "jstl"
 	compileOnly group: "org.osgi", name: "org.osgi.core"
-	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations", version: "1.3.0"
+	compileOnly group: 'com.liferay.portal', name: 'release.portal.api', version: '7.3.4-ga5'
 
 	compileOnly project(":modules:caldav-sync:caldav-sync-web")
 }
